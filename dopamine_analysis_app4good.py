@@ -59,6 +59,7 @@ if running_file is not None and dopamine_file is not None:
     # Load and process dopamine data
     dopamine_data = pd.read_excel(dopamine_file)
     dopamine_data.columns = dopamine_data.columns.str.strip()
+    dopamine_data.rename(columns={'Time':'Time (seconds)'}, inplace=True)
 
     dopamine_data['file'] = os.path.basename(dopamine_file.name)
 
