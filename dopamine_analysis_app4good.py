@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import io
+import os
 
 # Title for Streamlit app
 st.title("Dopamine Release and Running Analysis")
