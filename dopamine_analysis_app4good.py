@@ -59,6 +59,8 @@ if running_file is not None and dopamine_file is not None:
     dopamine_data = pd.read_excel(dopamine_file)
     dopamine_data.columns = dopamine_data.columns.str.strip()
 
+    dopamine_data['file'] = os.path.basename(dopamine_file.name)
+
     # Calculate average dopamine concentration per second
     dopamine_per_second = {}
     for second in range(int(dopamine_data['Time (seconds)'].max()) + 1):
